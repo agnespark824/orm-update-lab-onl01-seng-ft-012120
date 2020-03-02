@@ -61,7 +61,8 @@ class Student
         WHERE name = ?
       SQL
       
-    DB[:conn].execute(sql, name).map do |
+    DB[:conn].execute(sql, name).map do | row |
+      new_from_db(row)
   end
   
   def update
