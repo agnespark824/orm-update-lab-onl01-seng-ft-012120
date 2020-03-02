@@ -52,5 +52,5 @@ class Student
     grade = array[2]
     
     student = Student.new(name, grade, id)
-  
+    student
 end
