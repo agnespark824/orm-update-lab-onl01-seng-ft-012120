@@ -42,9 +42,15 @@ class Student
   end
   
   def self.create(name, grade)
-    student = Student.new(name, grade)
+    student = Student.new(name, grade, id=nil)
     student.save
-    student
   end
+  
+  def self.new_from_db(array)
+    id = array[0]
+    name = array[1]
+    grade = array[2]
+    
+    
   
 end
