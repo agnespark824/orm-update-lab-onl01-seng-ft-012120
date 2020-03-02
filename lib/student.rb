@@ -34,10 +34,11 @@ class Student
     if self.id
       self.create
     else
-    sql = <<-SQL
-      INSERT INTO students(name, grade)
-      VALUES (?, ?)
-      SQL
+      sql = <<-SQL
+        INSERT INTO students(name, grade)
+        VALUES (?, ?)
+        SQL
+    end
       
     DB[:conn].execute(sql, self.name, self.grade)
     
