@@ -53,4 +53,5 @@ class Student
     
     student = Student.new(name, grade, id)
     student
+  end
 end
